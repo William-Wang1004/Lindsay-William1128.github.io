@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>蜘蛛纸牌 - saolei.games</title>
+    <meta name="keywords" content="蜘蛛纸牌,纸牌,在线蜘蛛纸牌,网页蜘蛛纸牌,微软蜘蛛纸牌">
+    <meta name="description" content="网页蜘蛛纸牌游戏，无需下载，可在线直接玩。提供三种花色下不同难度等级选择，支持操作提示。">
+    <meta name="renderer" content="webkit" />
+    <meta name="applicable-device" content="pc">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="spider/css.css?v=20230928" />
+    <link rel="icon" href="spider/spico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="spider/spico.ico" type="image/x-icon">
+</head>
+
+<body>
+    <img style="display: none" width="0" height="0" src="spider/poker.png" />
+    <img style="display: none" width="0" height="0" src="spider/bk.png" />
+    <div id="table">
+        <div id="info-box">
+            <div title="点击提示" id="game-info">
+                <div class="game-info-box">
+                    <div><span>得分</span><span id="game-score">500</span></div>
+                    <div><span>操作</span><span id="game-step">0</span></div>
+                    <div><span>时间</span><span id="game-timer">0 : 00</span></div>
+                </div>
+            </div>
+            <div class="game-opt">
+                <button>开局</button>
+                <button>难度选择</button>
+                <button>声音 : 开</button>
+                <button>关于</button>
+            </div>
+        </div>
+        <div id="mini-info-box">
+            <div class="mini-info">
+                <button>得分 <span id="mini-game-score">500</span></button>
+                <button>操作 <span id="mini-game-step">0</span></button>
+                <button>时间 <span id="mini-game-timer">0 : 00</span></button>
+            </div>
+            <div class="mini-opt">
+                <button>开局</button>
+                <button>难度选择</button>
+                <button>声音 : 开</button>
+                <button>关于</button>
+                <button>提示(!)</button>
+            </div>
+        </div>
+        <div id="shadow"></div>
+    </div>
+    <div id="win-box">
+        <div class="win-wrap">
+            <div><span class="winbox-msg">你赢了</span></div>
+            <div><span class="winbox-tips">[任意点击屏幕开始下一局]</span></div>
+        </div>
+    </div>
+    <div id="start">
+        <div class="start-top">
+            <span>
+                选择难度(<span title="难度区分基于洗牌方式，随机难度更容易产生僵局" class="level-help">?</span>)
+            </span>
+            <span id="start-x" class="close-x">
+                <svg class="svg" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M6 5.293l4.789-4.79.707.708-4.79 4.79 4.79 4.789-.707.707-4.79-4.79-4.789 4.79-.707-.707L5.293 6 .502 1.211 1.21.504 6 5.294z" fill-rule="nonzero" fill-opacity="1" fill="#FFF" stroke="none"></path></svg>
+            </span>
+        </div>
+        <div class="start-select">
+            <div class="level-box">
+                <div>单色 <span class="black">♠</span></div>
+                <div class="level-select">
+                    <label><input name="select" value="1-n" type="radio" checked="checked" />简单</label>
+                    <label><input name="select" value="1-m" type="radio" />一般</label>
+                    <label><input name="select" value="1-h" type="radio" />困难</label>
+                    <label><input name="select" value="1-r" type="radio" />随机</label>
+                </div>
+            </div>
+            <div class="level-box">
+                <div>双色 <span class="red">♥</span> <span class="black">♠</span></div>
+                <div class="level-select">
+                    <label><input name="select" value="2-m" type="radio" />一般</label>
+                    <label><input name="select" value="2-h" type="radio" />困难</label>
+                    <label><input name="select" value="2-r" type="radio" />随机</label>
+                </div>
+            </div>
+            <div class="level-box">
+                <div>四色 <span class="red">♦</span> <span class="black">♣</span><span class="red"> ♥</span> <span class="black">♠</span></div>
+                <div class="level-select">
+                    <label><input name="select" value="4-h" type="radio" />困难</label>
+                    <label><input name="select" value="4-r" type="radio" />随机</label>
+                </div>
+            </div>
+        </div>
+        <div class="level-bt-box">
+            <button>开 始</button>
+            <button>取 消</button>
+        </div>
+        <div class="tips"><strong>提示: </strong>点击下方 <strong>[得分框]</strong> 可获得操作提示，当纸牌堆叠挤压时，可通过<strong>[鼠标滚轮]</strong>展开或收缩。</div>
+    </div>
+    <div id="about">
+        <div>
+            <span>关于</span>
+            <span id="about-x" class="close-x">
+                <svg class="svg" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M6 5.293l4.789-4.79.707.708-4.79 4.79 4.79 4.789-.707.707-4.79-4.79-4.789 4.79-.707-.707L5.293 6 .502 1.211 1.21.504 6 5.294z" fill-rule="nonzero" fill-opacity="1" fill="#FFF" stroke="none"></path></svg>
+            </span>
+        </div>
+        <div>
+            <p>
+                反馈<br/><a title="站内留言板" target="_blank" href="https://www.saolei.games/board.html">留言</a>&nbsp;&nbsp;<a title="电子邮件" target="_blank" href="mailto:zhangxiaolei@outlook.com">邮件反馈</a>
+            </p>
+            <p>
+                其它作品<br/>
+                <a target="_blank" href="https://www.saolei.games/saolei.html">扫雷</a>&nbsp;&nbsp;
+                <a target="_blank" href="https://www.saolei.games/wuziqi.html">在线五子棋</a>&nbsp;&nbsp;
+                <a target="_blank" href="https://www.saolei.games/2048.html">2048</a>&nbsp;&nbsp;
+                <a target="_blank" href="https://www.saolei.games/t.html">俄罗斯方块</a>
+            </p>
+        </div>
+    </div>
+    <script src="include/jquery-3-6-0.js"></script>
+    <script src="include/howler-core-min.js"></script>
+    <script src="spider/game.js?v=20230928F1"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?404bf733922de13a27cc43dd3805036e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+
+</html>

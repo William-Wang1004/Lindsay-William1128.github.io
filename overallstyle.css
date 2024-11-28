@@ -1,0 +1,350 @@
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: darkgrey;
+  color: #000;
+  bottom: 0;
+}
+.bar{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    
+}
+bar:hover{
+    color: darkred;
+    text-shadow: 5px 5px 5px black; 
+    
+}
+aside{
+    font-family: "Bokor", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 5px 5px 5px darkred;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+ul{
+    color: gainsboro;
+}
+.title{
+    font-family: "Bokor", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    display: inline;
+    font-size: 200px;
+    text-shadow: 5px 5px 5px darkred; 
+    color: white;
+    bottom: 0;
+    width: 20%;
+}
+.title:hover{
+    font-size: 150px;
+    color: darkred;
+    text-shadow: 5px 5px 5px black; 
+    
+}
+.t2{
+    font-family: "Bokor", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 5px 5px 5px red;
+    font-size: 50px;
+    color: white;
+    top: 0;
+    margin-bottom: 40px;
+    position: fixed;
+}
+
+iframe{
+    text-align: center;
+    margin-left: 20px
+}
+
+
+#body{
+    background-color: black;
+    height: 100%
+}
+.rbody{
+    background-color: black;
+}
+#gbody{
+    background-color: black;
+}
+
+.poker {
+    bottom: 0;
+    height: 100vh;
+    left: 60%;
+    margin-left: -50vh;
+    position: absolute;
+    transform: scale(0.9);
+    transform-origin: 50% 100%;
+    width: 100vh;
+}
+
+.hand {
+    bottom: -1vh;
+    left: 0;
+    position: absolute;
+}
+
+.finger,
+.card {
+    animation: creep 3s ease-in-out 0s infinite alternate backwards;
+    background: no-repeat url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/59639/poker.png') 0 0;
+    background-size: 200vh 200vh;
+    position: absolute;
+    transform-origin: 50% 90%;
+}
+
+.pinky {
+    animation-delay: 0.7s;
+    bottom: 0;
+    height: 36vh;
+    left: 42.8vh;
+    transform-origin: 50% 100%;
+    width: 36.6vh;
+}
+
+.ring {
+    animation-delay: 4s;
+    background-position: -37vh 0;
+    bottom: 0.8vh;
+    height: 47vh;
+    left: 35.7vh;
+    width: 47.4vh;
+}
+
+.middle {
+    animation-delay: 0.2s;
+    background-position: -85vh 0;
+    bottom: 5.6vh;
+    height: 62.5vh;
+    left: 31.7vh;
+    width: 47.2vh;
+}
+
+.index {
+    background-position: -133vh 0;
+    bottom: 16.6vh;
+    height: 53.6vh;
+    left: 25.6vh;
+    width: 33.5vh;
+}
+
+.cards {
+    animation: creep 3s ease-in-out 0s infinite alternate;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform-origin: 40% 65%;
+    width: 100%;
+}
+
+.ten {
+    animation-delay: 0.2s;
+    background-position: -0.1vh -65vh;
+    bottom: 29.8vh;
+    height: 61.2vh;
+    left: 37.8vh;
+    transform-origin: 5% 70%;
+    width: 60.6vh;
+}
+
+.jack {
+    animation-delay: 0.8s;
+    background-position: -62vh -65vh;
+    bottom: 44vh;
+    height: 52.4vh;
+    left: 34.2vh;
+    transform-origin: 15% 90%;
+    width: 47.8vh;
+}
+
+.queen {
+    animation-delay: 1.1s;
+    background-position: -111vh -65vh;
+    bottom: 39.2vh;
+    height: 52.7vh;
+    left: 26.9vh;
+    transform-origin: 50% 95%;
+    width: 25vh;
+}
+
+.king {
+    animation-delay: 1.2s;
+    background-position: -137vh -65vh;
+    bottom: 38vh;
+    height: 58.1vh;
+    left: 13.6vh;
+    transform-origin: 60% 95%;
+    width: 36.3vh;
+}
+
+.ace {
+    animation-delay: 1.3s;
+    background-position: 0vh -127vh;
+    bottom: 27.9vh;
+    height: 55.8vh;
+    left: 3.6vh;
+    transform-origin: 90% 100%;
+    width: 39.6vh;
+}
+
+@keyframes creep {
+    0% { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+
+
+#user{
+    background-image: url(red.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3{
+   font-family: "Bokor", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: gray;
+    padding: 10px 10px 0px 10px;
+}
+.t{
+    color: black;
+    padding: 10px;
+    margin-top: 0px;
+}
+.tbox{
+    width: 80%;
+    margin-left: 10px;
+    background-color: gainsboro;
+    opacity:0.7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px darkred;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    margin-top: 20px;
+    
+}
+.tbox:hover{
+    opacity:1;
+    
+}
+
+
+#set {
+  display: flex;
+  margin: 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 卡片样式 */
+.card1 {
+  width: 60px;
+  height: 90px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card1 .rank {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card1 .suit {
+  font-size: 24px;
+}
+
+/* 鼠标悬停时跳动效果 */
+.card1:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+#spider{
+    color: black;
+}
+.g{
+    color: white;
+    text-shadow: 2px 2px 2px darkred;
+    font-family: "Bokor", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.img{
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    border:4px grey solid;
+    margin-left: 10px;
+}
+
+
+.container2 {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  margin-left: -64.5px;
+  margin-top: -85.5px;
+}
+
+.ghost {
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+.shadowFrame {
+  width: 130px;
+  margin-top: 15px;
+}
+.shadow {
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center;
+  ellipse {
+    transform-origin: center center;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 60%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
