@@ -1,53 +1,100 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        
-         <link rel="stylesheet" href="overallstyle.css" type="text/css">
-        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="overallstyle.css" type="text/css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
-        
-        
+    
+	<title>log in</title>
+</head>
+<body id="user">
+	<div id = 'container'>
+		<p id = 'one'>Log in--POKERS♣ ♦ ♠</p>
+		<div id="name">
+			<label>name</label>
+            <p class="rule">(must not be blank)</p>
+			<br>
+			<input id="a">
+		</div>
+		<div id="password">
+			<label>password</label>
+            <p class="rule">(must countain special characters,numbers and alphabet)</p>
+			<br>
+			<input id="b">
+		</div>
+		<div id="continue">
+			<button onclick="sub()">submit</button>
+	</div>
+    </div>
 
-    </head>
-    <body id="body">
-        <!--nav-->
-        <aside>
-                <ul>
-                <li><a href="Poker(home).html" class="bar">Home</a></li>
-                <li><a href="Poker(rules).html" class="bar">Rules</a></li><br>
-                <li><a href="Poker(game).html" class="bar">For Fun</a></li><br>
-                <li><a href="Poker(form).html"class="bar">Poker Set</a></li><br>
-                <li><a href="Poker(log%20in).html"class="bar">Log out</a></li><br>
-            </ul>
-            </aside>
-            
-        
-        <p class="title">P</p>
-        <p class="title">O</p>
-        <p class="title">K</p>
-        <p class="title">E</p>
-        <p class="title">R</p>
-        
-        <div class="poker">
-        <div class="cards">
-        <div class="ace card"></div>
-        <div class="king card"></div>
-        <div class="queen card"></div>
-        <div class="jack card"></div>
-        <div class="ten card"></div>
-        </div>
-        <div class="hand">
-        <div class="index finger"></div>
-        <div class="middle finger"></div>
-        <div class="ring finger"></div>
-        <div class="pinky finger"></div>
-         </div>
-        </div>
-        
-        
-        
+<style type="text/css">
+	#container{
+		padding: 1% 1% 1% 1%;
+		margin:10% 10% 10% 10% ;
+		background-color: gainsboro;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px darkred;
+        opacity: 0.8;
+        transition:0.5s;
+        transition-delay: 0.5s;
+	}
+    #container:hover{
+        opacity: 1;
+    }
+    #one{
+        font-family: "Bokor", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 50px;
+        color: white;
+        text-shadow: 5px 5px 5px darkred; 
+    }
+    #name{
+        font-family: "Bokor", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+    #password{
+        font-family: "Bokor", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+    .rule{
+        display: inline;
+        color: grey;
+    }
+    
+    
+    
+</style>
+<script type="text/javascript">
+	function sub(){
+		let n = document.getElementById('a').value;
+		let pw = document.getElementById('b').value;
+		if(pw!=''){
+        if (/[a-zA-Z]/.test(pw)&&/[0-9]/.test(pw)==true){
+            if(pw[0] >= 'A' && pw[0] <= 'Z'){
+                if(/[@$&!?]/.test(pw)){
+                    if(pw.length>8){
+                        alert('the password is valid');
+                         window.location.href = "Poker(home).html";	
+                    }
+                    else alert('the length of the password must greater than 8')
+                }
+                else alert('the password must contain one of @$&!?')
+            }
+            else alert('the first letter should be capital letter')
+        }
+        else alert('the password must contain both number and letter');
+    }
+    else alert('the password can not be empty')
+}
+</script>
     </body>
 </html>
