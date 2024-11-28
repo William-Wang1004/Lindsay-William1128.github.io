@@ -28,6 +28,11 @@ aside{
     right: 0;
     height: 100%;
 }
+
+aside a:hover{
+    color: darkred;
+    text-shadow: 5px 5px 5px white;
+}
 ul{
     color: gainsboro;
 }
